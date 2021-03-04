@@ -1,0 +1,50 @@
+header {
+    background-color: lightslategrey;
+    color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+/* source for animation: https://css-tricks.com/snippets/css/typewriter-effect/ */
+header h1 {
+    font-size: 50px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid transparent; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(25, end),
+      blink-caret .75s step-end 4;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: lightgoldenrodyellow; }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    header h1{
+        animation: none;
+    } 
+}
+
+input {
+    margin: 10px;
+}
+
+p {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
